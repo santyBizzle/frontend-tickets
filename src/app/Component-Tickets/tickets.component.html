@@ -1,0 +1,26 @@
+<ol class="list-group list-group-numbered">
+  <a
+    href="#"
+    class="list-group-item list-group-item-action active"
+    aria-current="true"
+  >
+    TICKETS
+  </a>
+  <li
+    *ngFor="let ticket of tickets"
+    class="list-group-item d-flex justify-content-between align-items-start"
+  >
+    <div class="ms-2 me-auto">
+      <div class="fw-bold">De: {{ ticket.from }}</div>
+      <div class="fw-bold">Ticket: {{ ticket.ticketId }}</div>
+
+      <span class="badge bg-danger">{{ ticket.status }}</span>
+      {{ ticket.subject }}
+      <div>{{ ticket.body }}</div>
+    </div>
+
+    <span class="badge bg-primary rounded-pill"
+      >Enviado: {{ ticket.date }}</span
+    >
+  </li>
+</ol>
